@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import GetUsers from "./components/GetUsers";
+import SearchBar from "./components/SearchBar";
+import RenderUsers from "./components/RenderUsers";
 function App() {
+
+  function getInput (value) {
+   console.log("sdsdsdbgfdcsdvgbngbdsff",value)
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="ui container">
+      <SearchBar />
+      <GetUsers getUserInput={getInput} />
     </div>
   );
 }
